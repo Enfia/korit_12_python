@@ -61,4 +61,3 @@ person1.set_info(age=20, tel='010-1234-5678', address='부산광역시 부산진
 person1.show_info()
 print(person1.show_info2())
 
-constructor 디렉토리 -> main

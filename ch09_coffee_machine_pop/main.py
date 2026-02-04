@@ -29,22 +29,7 @@ resources = {
     '커피': 100,
 }
 profit = 0
-# 자판기 보유량에서 에스프레소 두 잔을 추출했을 때 resources의 남은 물, 우유, 커피량을 딕셔너리 형태로 보여주시오.
-# for key in MENU['카푸치노']['재료']:
-#     resources[key] -= MENU['카푸치노']['재료'][key] * 2
-# print(resources)
 
-# 라떼 한 잔을 뽑았을 때 남는 resources를 출력하고, 라떼 금액만큼 profit 더한 결과를 콘솔에 출력하시오.
-
-# 로직
-# drink = MENU['라떼']
-#
-# for stuff in drink['재료']:
-#     resources[stuff] -= MENU['라떼']['재료'][stuff]
-# profit += MENU['라떼']['가격']
-# print(resources)
-# print(profit)
-# 함수 정의 영역
 def report():
     print(f'물 : {resources['물']} ml')
     print(f'우유 : {resources['우유']} ml')

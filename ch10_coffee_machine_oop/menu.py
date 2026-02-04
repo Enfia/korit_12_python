@@ -17,7 +17,7 @@ class Menu:
             MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),
             MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.5),
             MenuItem(name="cappuccino", water=250, milk=50, coffee=24, cost=3),
-            MenuItem(name="카라멜마키아토", water=200, milk=60, coffee=26, cost=4),
+            MenuItem(name="caramel", water=200, milk=60, coffee=26, cost=4),
         ]
 
     def get_items(self):
@@ -28,7 +28,6 @@ class Menu:
         return options
 
     def find_drink(self, order_name):
-        """특정 음료를 이름으로 메뉴에서 검색합니다. 해당 아이템이 존재하면 반환하고, 그렇지 않으면 None을 반환합니다."""
         for item in self.menu:
             if item.name == order_name:
                 return item

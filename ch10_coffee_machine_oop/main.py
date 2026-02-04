@@ -17,11 +17,15 @@ while is_on:
     elif choice == 'report':
         coffee_maker.report()
         money_machine.report()
-    else:
+    elif choice in [item.name for item in menu.menu]:
         drink = menu.find_drink(choice)
-        print(drink)
-        print(drink.name)
-        print(drink.water)
-        print(drink.milk)
-        print(drink.coffee)
-        print(drink.cost)
+        if drink is not None:
+            continue
+        if coffee_maker.is_resource_sufficient(drink):
+            if money_machine.make_payment(drink.cost):
+                coffee_maker.make_coffee(drink)
+        else:
+            print('ㄴㄴ')
+
+    else:
+        print('잘못 입력했습니다')

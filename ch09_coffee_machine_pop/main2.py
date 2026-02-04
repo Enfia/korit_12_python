@@ -1,3 +1,4 @@
+# 메뉴
 MENU = {
     '에스프레소': {
         '재료' : {
@@ -23,19 +24,25 @@ MENU = {
         '가격': 3.0,
     },
 }
+
+# 재료
 resources = {
     '물': 300,
     '우유': 200,
     '커피': 100,
 }
+
+# 남은 돈
 profit = 0
 
+# 재료와 남은 돈 출력함
 def report():
     print(f'물 : {resources['물']} ml')
     print(f'우유 : {resources['우유']} ml')
     print(f'커피 : {resources['커피']} g')
     print(f'$ {profit}')
 
+# 주문 음료의 재료가 현재 자원으로 충분한지 검사
 def is_resource_enough(order_ingredients):
     for item in order_ingredients:
         if order_ingredients[item] > resources[item]:
@@ -43,6 +50,7 @@ def is_resource_enough(order_ingredients):
             return False
     return True
 
+# 돈을 얼마 넣을지 설정함
 def process_coins():
     total = 0.0
     total += int(input('쿼터 동전을 몇 개 넣으시겠습니까? >>> ')) * 0.25
